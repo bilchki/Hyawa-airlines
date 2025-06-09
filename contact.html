@@ -1,1 +1,41 @@
-<!-- Contact page HTML content with form -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact – Hwaya Airlines</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #fff; color: #333; }
+    nav, footer { background: #003366; color: white; text-align: center; padding: 15px; }
+    nav a { color: white; margin: 0 20px; text-decoration: none; font-weight: bold; }
+    .container { max-width: 600px; margin: 40px auto; padding: 20px; }
+    input, textarea, button { width: 100%; padding: 12px; margin: 10px 0; font-size: 16px; }
+    button { background: #004080; color: white; border: none; cursor: pointer; }
+    h1 { color: #003366; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Accueil</a>
+  <a href="destinations.html">Destinations</a>
+  <a href="about.html">À propos</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+  <h1>Contactez-nous</h1>
+  <form action="https://formspree.io/f/xgegrkzq" method="POST">
+    <input type="text" name="nom" placeholder="Votre nom" required>
+    <input type="email" name="email" placeholder="Votre email" required>
+    <textarea name="message" placeholder="Votre message..." rows="5" required></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
+</div>
+
+<footer>
+  <p>© 2025 Hwaya Airlines</p>
+</footer>
+
+</body>
+</html>
