@@ -1,30 +1,116 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hwaya Airlines – Accueil</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hwaya Airlines – Explorez le Monde</title>
   <style>
-    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #ffffff; color: #333; }
-    header { background: url('https://source.unsplash.com/1600x600/?airplane-sunset') center/cover; padding: 100px 20px; color: white; text-align: center; }
-    header h1 { font-size: 60px; margin-bottom: 10px; text-shadow: 2px 2px 4px #000; }
-    nav { background: #003366; text-align: center; padding: 15px 0; }
-    nav a { color: white; margin: 0 20px; text-decoration: none; font-weight: bold; font-size: 18px; }
-    .promo { background: #ffe600; color: #c0392b; padding: 20px; text-align: center; font-weight: bold; font-size: 20px; }
-    .form-section, .gallery { max-width: 1000px; margin: 40px auto; padding: 20px; }
-    .form-section { background: #f2f2f2; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    input, select, button { width: 100%; padding: 12px; margin: 10px 0; font-size: 16px; }
-    button { background: #004080; color: white; border: none; cursor: pointer; }
-    .gallery { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-    .gallery img { width: 300px; height: 200px; object-fit: cover; border-radius: 8px; }
-    footer { background: #003366; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; color: #333; background: #fff; }
+
+    header {
+      background: url('https://source.unsplash.com/1600x700/?airplane,sky') center/cover no-repeat;
+      padding: 100px 20px;
+      color: white;
+      text-align: center;
+    }
+    header h1 { font-size: 48px; text-shadow: 2px 2px 6px #000; }
+    header p { font-size: 20px; margin-top: 10px; }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background: #003366;
+      padding: 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .banner {
+      background: #e74c3c;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 18px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      max-width: 1200px;
+      margin: 40px auto;
+      gap: 40px;
+    }
+
+    .form-box {
+      flex: 1;
+      min-width: 280px;
+      background: #f2f2f2;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .form-box input, .form-box select, .form-box button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .form-box button {
+      background: #003366;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .destinations {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .destinations h2 {
+      margin-bottom: 20px;
+      color: #003366;
+    }
+
+    .destinations img {
+      width: 48%;
+      margin: 1%;
+      border-radius: 8px;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .section h2 {
+      color: #003366;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Hwaya Airlines</h1>
-  <p>Votre voyage commence ici</p>
+  <h1>Explorez le Monde avec Hwaya Airlines</h1>
+  <p>Des destinations de rêve à portée de main</p>
 </header>
 
 <nav>
@@ -34,34 +120,45 @@
   <a href="contact.html">Contact</a>
 </nav>
 
-<div class="promo">
-  🌴 Promo : -20% sur les vols pour la Thaïlande cette semaine seulement !
+<div class="banner">
+  ✈️ 20% de réduction sur les vols pour la Thaïlande – Cette semaine seulement !
 </div>
 
-<div class="form-section">
-  <h2>Réservez votre vol</h2>
-  <form>
-    <label>Départ :</label><input type="text" placeholder="Ex: Paris">
-    <label>Destination :</label><input type="text" placeholder="Ex: Bangkok">
-    <label>Date :</label><input type="date">
-    <label>Classe :</label>
-    <select>
-      <option>Économique</option>
-      <option>Premium</option>
-      <option>Business</option>
-    </select>
-    <button type="submit">Chercher un vol</button>
-  </form>
+<div class="container">
+  <div class="form-box">
+    <h2>Réservez votre billet</h2>
+    <form>
+      <input type="text" placeholder="Départ" required />
+      <input type="text" placeholder="Destination" required />
+      <input type="date" required />
+      <select>
+        <option>Économique</option>
+        <option>Premium</option>
+        <option>Business</option>
+      </select>
+      <button type="submit">Rechercher</button>
+    </form>
+  </div>
+
+  <div class="destinations">
+    <h2>Nos Destinations</h2>
+    <img src="https://source.unsplash.com/400x300/?thailand" alt="Thaïlande"/>
+    <img src="https://source.unsplash.com/400x300/?beach" alt="Plage"/>
+  </div>
 </div>
 
-<div class="gallery">
-  <img src="https://source.unsplash.com/300x200/?thailand" alt="Thaïlande">
-  <img src="https://source.unsplash.com/300x200/?beach" alt="Plage">
-  <img src="https://source.unsplash.com/300x200/?airplane" alt="Avion">
+<div class="section">
+  <h2>À propos de Hwaya Airlines</h2>
+  <p>Nous nous engageons à fournir des expériences de voyage exceptionnelles avec confort et sécurité. Notre flotte moderne dessert les plus belles destinations du monde.</p>
+</div>
+
+<div class="section">
+  <h2>Contactez-nous</h2>
+  <p>📧 info@hwayaairlines.com</p>
 </div>
 
 <footer>
-  <p>© 2025 Hwaya Airlines</p>
+  © 2025 Hwaya Airlines – Tous droits réservés
 </footer>
 
 </body>
