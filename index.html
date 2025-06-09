@@ -12,7 +12,7 @@
       color: #fff;
     }
     header {
-      background: url('https://source.unsplash.com/1600x700/?airplane') center/cover no-repeat;
+      background: url('images/header_plane.jpg') center/cover no-repeat;
       height: 400px;
       position: relative;
       display: flex;
@@ -24,8 +24,9 @@
       position: absolute;
       top: 20px;
       left: 30px;
-      font-size: 22px;
-      font-weight: bold;
+    }
+    .logo img {
+      height: 50px;
     }
     nav {
       position: absolute;
@@ -41,9 +42,10 @@
     .header-content {
       text-align: center;
       color: white;
+      margin-top: 60px;
     }
     .header-content h1 {
-      font-size: 40px;
+      font-size: 38px;
       text-shadow: 2px 2px 5px black;
     }
     .promo-banner {
@@ -102,7 +104,9 @@
 <body>
 
 <header>
-  <div class="logo">✈️ Hwaya Airlines</div>
+  <div class="logo">
+    <img src="images/logo_hwaya.png" alt="Logo Hwaya Airlines">
+  </div>
   <nav>
     <a href="#">Accueil</a>
     <a href="#">Destinations</a>
@@ -110,12 +114,12 @@
     <a href="#">Contact</a>
   </nav>
   <div class="header-content">
-    <h1>Explorez le Monde avec Hwaya Airlines</h1>
+    <h1>Explorez le Monde avec<br>Hwaya Airlines</h1>
   </div>
 </header>
 
 <div class="promo-banner">
-  20% de réduction sur les vols pour la Thaïlande – Cette semaine seulement !
+  ✈️ 20% de réduction sur les vols pour la Thaïlande – Cette semaine seulement !
 </div>
 
 <div class="main">
@@ -134,8 +138,8 @@
 
   <div class="destinations">
     <h2>Nos Destinations</h2>
-    <img src="destination_thailand.jpg" alt="Thaïlande">
-    <img src="destination_beach.jpg" alt="Plage">
+    <img src="images/destination_thailand.jpg" alt="Thaïlande">
+    <img src="images/destination_beach.jpg" alt="Plage">
   </div>
 </div>
 
