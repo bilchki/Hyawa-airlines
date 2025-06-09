@@ -1,2 +1,68 @@
-<!-- Rebuild trigger -->
-<!-- Home page HTML content would go here -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hwaya Airlines – Accueil</title>
+  <style>
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #ffffff; color: #333; }
+    header { background: url('https://source.unsplash.com/1600x600/?airplane-sunset') center/cover; padding: 100px 20px; color: white; text-align: center; }
+    header h1 { font-size: 60px; margin-bottom: 10px; text-shadow: 2px 2px 4px #000; }
+    nav { background: #003366; text-align: center; padding: 15px 0; }
+    nav a { color: white; margin: 0 20px; text-decoration: none; font-weight: bold; font-size: 18px; }
+    .promo { background: #ffe600; color: #c0392b; padding: 20px; text-align: center; font-weight: bold; font-size: 20px; }
+    .form-section, .gallery { max-width: 1000px; margin: 40px auto; padding: 20px; }
+    .form-section { background: #f2f2f2; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    input, select, button { width: 100%; padding: 12px; margin: 10px 0; font-size: 16px; }
+    button { background: #004080; color: white; border: none; cursor: pointer; }
+    .gallery { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .gallery img { width: 300px; height: 200px; object-fit: cover; border-radius: 8px; }
+    footer { background: #003366; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Hwaya Airlines</h1>
+  <p>Votre voyage commence ici</p>
+</header>
+
+<nav>
+  <a href="index.html">Accueil</a>
+  <a href="destinations.html">Destinations</a>
+  <a href="about.html">À propos</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="promo">
+  🌴 Promo : -20% sur les vols pour la Thaïlande cette semaine seulement !
+</div>
+
+<div class="form-section">
+  <h2>Réservez votre vol</h2>
+  <form>
+    <label>Départ :</label><input type="text" placeholder="Ex: Paris">
+    <label>Destination :</label><input type="text" placeholder="Ex: Bangkok">
+    <label>Date :</label><input type="date">
+    <label>Classe :</label>
+    <select>
+      <option>Économique</option>
+      <option>Premium</option>
+      <option>Business</option>
+    </select>
+    <button type="submit">Chercher un vol</button>
+  </form>
+</div>
+
+<div class="gallery">
+  <img src="https://source.unsplash.com/300x200/?thailand" alt="Thaïlande">
+  <img src="https://source.unsplash.com/300x200/?beach" alt="Plage">
+  <img src="https://source.unsplash.com/300x200/?airplane" alt="Avion">
+</div>
+
+<footer>
+  <p>© 2025 Hwaya Airlines</p>
+</footer>
+
+</body>
+</html>
