@@ -3,163 +3,148 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hwaya-airlines</title>
+  <title>Hwaya Airlines</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', sans-serif; color: #fff; background: #003366; }
-
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0e1d35;
+      color: #fff;
+    }
     header {
-      background: url('https://source.unsplash.com/1600x700/?airplane,sky') center/cover no-repeat;
-      padding: 120px 20px;
-      text-align: center;
-      color: white;
-    }
-    header h1 {
-      font-size: 48px;
-      text-shadow: 2px 2px 6px #000;
-      margin-bottom: 10px;
-    }
-
-    nav {
-      background: rgba(0, 0, 0, 0.7);
+      background: url('https://source.unsplash.com/1600x700/?airplane') center/cover no-repeat;
+      height: 400px;
+      position: relative;
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      gap: 25px;
-      padding: 15px 0;
+      padding: 0 20px;
     }
-
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+    }
     nav a {
       color: #fff;
+      margin-left: 20px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 18px;
     }
-
-    .banner {
-      background: #e67e22;
-      color: white;
+    .header-content {
       text-align: center;
-      padding: 15px;
-      font-size: 18px;
-    }
-
-    .main {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-    }
-
-    .form-box {
-      background: #f2f2f2;
-      color: #333;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 40px;
-    }
-
-    .form-box h2 {
-      color: #003366;
-    }
-
-    .form-box input,
-    .form-box select,
-    .form-box button {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      font-size: 16px;
-    }
-
-    .form-box button {
-      background: #003366;
       color: white;
-      border: none;
-      cursor: pointer;
     }
-
-    .images {
+    .header-content h1 {
+      font-size: 40px;
+      text-shadow: 2px 2px 5px black;
+    }
+    .promo-banner {
+      background-color: #e74c3c;
+      padding: 10px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .main {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      margin-bottom: 40px;
+      justify-content: space-around;
+      padding: 40px 20px;
+      background-color: #fff;
+      color: #000;
     }
-
-    .images img {
-      width: 48%;
+    .form-box, .destinations {
+      flex: 1 1 400px;
+      margin: 20px;
+      padding: 20px;
+      background: #f8f8f8;
       border-radius: 8px;
     }
-
-    .section {
-      margin-bottom: 40px;
+    .form-box input, .form-box select, .form-box button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 16px;
     }
-
-    .section h2 {
-      margin-bottom: 15px;
-      color: #f39c12;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #001f3f;
+    .form-box button {
+      background: #0e1d35;
       color: white;
+      border: none;
+    }
+    .destinations img {
+      width: 48%;
+      margin: 1%;
+      border-radius: 6px;
+    }
+    footer {
+      background: #0e1d35;
+      text-align: center;
+      color: white;
+      padding: 30px 20px;
+    }
+    @media (max-width: 768px) {
+      .main {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Hwaya-airlines</h1>
-  <p>Partez à l’aventure dès aujourd’hui</p>
+  <div class="logo">✈️ Hwaya Airlines</div>
+  <nav>
+    <a href="#">Accueil</a>
+    <a href="#">Destinations</a>
+    <a href="#">À propos</a>
+    <a href="#">Contact</a>
+  </nav>
+  <div class="header-content">
+    <h1>Explorez le Monde avec Hwaya Airlines</h1>
+  </div>
 </header>
 
-<nav>
-  <a href="#">Accueil</a>
-  <a href="#">Destinations</a>
-  <a href="#">À propos</a>
-  <a href="#">Contact</a>
-</nav>
-
-<div class="banner">
-  🎉 Promotion spéciale : -20% sur tous les vols vers la Thaïlande cette semaine !
+<div class="promo-banner">
+  20% de réduction sur les vols pour la Thaïlande – Cette semaine seulement !
 </div>
 
 <div class="main">
   <div class="form-box">
-    <h2>Réserver un billet</h2>
-    <form>
-      <input type="text" placeholder="Ville de départ" required />
-      <input type="text" placeholder="Destination" required />
-      <input type="date" required />
-      <select required>
-        <option value="">Classe de voyage</option>
-        <option>Économique</option>
-        <option>Business</option>
-        <option>Première</option>
-      </select>
-      <button type="submit">Rechercher</button>
-    </form>
+    <h2>Réservez votre billet</h2>
+    <input type="text" placeholder="Départ" />
+    <input type="text" placeholder="Destination" />
+    <input type="date" />
+    <select>
+      <option>Économique</option>
+      <option>Business</option>
+      <option>Première</option>
+    </select>
+    <button>Rechercher</button>
   </div>
 
-  <div class="images">
-    <img src="https://source.unsplash.com/500x300/?thailand" alt="Thaïlande">
-    <img src="https://source.unsplash.com/500x300/?airplane,travel" alt="Voyage">
-  </div>
-
-  <div class="section">
-    <h2>À propos de Hwaya</h2>
-    <p>Hwaya Airlines vous connecte aux plus belles destinations du monde avec confort, sécurité et service premium.</p>
-  </div>
-
-  <div class="section">
-    <h2>Contact</h2>
-    <p>Email : contact@hwaya-airlines.com</p>
+  <div class="destinations">
+    <h2>Nos Destinations</h2>
+    <img src="destination_thailand.jpg" alt="Thaïlande">
+    <img src="destination_beach.jpg" alt="Plage">
   </div>
 </div>
 
 <footer>
-  © 2025 Hwaya Airlines — Tous droits réservés
+  <p>À propos de Hwaya Airlines</p>
+  <p>Nous nous engageons à fournir des expériences de voyage exceptionnelles avec confort et sécurité.</p>
+  <br />
+  <p>Contactez-nous : info@hwayaairlines.com</p>
+  <p>© 2025 Hwaya Airlines — Tous droits réservés</p>
 </footer>
 
 </body>
